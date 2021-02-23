@@ -21,11 +21,18 @@ body{
 }
 
 #screen{
+    overflow:auto;
     display: block;
     background-color: #F0D694;
     height: 80px;
     margin: 1.2rem;
     border-radius: 10px;
+    text-align: right;
+}
+#text{
+    margin-top: 0.4em;
+    margin-right: 1em;
+    font-family: 'Lato', sans-serif;
 }
 #buttons{
     display: grid;
