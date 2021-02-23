@@ -15,27 +15,34 @@ buttons.forEach(button =>{
         button.addEventListener('click', eraseAll);
     else if(item == "+")
         button.addEventListener('click', e =>{
+            continuous();
             operation = "+";
             newInput = true;
             num2_start = true;
+
         })
     else if(item == '-')
         button.addEventListener('click', e =>{
+            continuous();
             operation = "-";
             newInput = true;
             num2_start = true;
         });
     else if(item == 'X')
         button.addEventListener('click', e =>{
+            continuous();
             operation = "X";
             newInput = true;
             num2_start = true;
+
         })
     else if(item =='/')
         button.addEventListener('click', e=>{
+            continuous();
             operation = "/";
             newInput = true;
             num2_start = true;
+
         })
     else if(item == "=")
         button.addEventListener('click', equals);
@@ -52,6 +59,11 @@ function insertNumber(num){
 
 function eraseAll(){
     screen.innerHTML = '0';
+    num1 = undefined;
+    num2 = undefined;
+    operation = undefined;
+    num2_start = false;
+    newInput = false;
 }
 
 function equals(){
@@ -68,6 +80,11 @@ function equals(){
     else if(operation == '/')
         division();
     }
+
+function continuous(){
+    if(num1 != undefined)
+        equals();
+}
 
 // --------------------------------------------------------------------------------------------------
 function addition(){
