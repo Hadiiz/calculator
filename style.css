@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: #E9C46A;
+    overflow-x: hidden;
+}
+
+
+#calculator{
+    display: block;
+    background-color: #2FB1A2;
+    margin-top: 10rem;
+    height: 500px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+    overflow:auto;
+}
+
+#screen{
+    display: block;
+    background-color: #F0D694;
+    height: 80px;
+    margin: 1.2rem;
+    border-radius: 10px;
+}
+#buttons{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    margin-bottom: 1.2rem;
+    height: 72%;
+}
+
+
+button{
+    border:2px solid #2FB1A2;
+    border-radius: 7px;
+    background-color: #ADEBE3;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+}
+#ac, #zero{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+#ac, #equal{
+    background-color: tomato;
+}
+
+#addition, #division, #multiplication, #subtraction ,#modulo{
+    background-color: #F4A261;
+}
